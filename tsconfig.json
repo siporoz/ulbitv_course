@@ -1,13 +1,24 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "outDir": "./dist/",
+    // Запрещает использование any
     "noImplicitAny": true,
-    "module": "es6",
+    // Указываем модуль для работы с мобдлями es6, commonJs, ESNext
+    "module": "ESNext",
+    // В какой стандарт компилится код для поддержки кода браузером
     "target": "es5",
+    // Дает возмоднось работать с jsx
     "jsx": "react",
+    // Разрешает компилить js файлы
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  // Добаляем компил в commonJs чтобы работали import
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
