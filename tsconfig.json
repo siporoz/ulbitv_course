@@ -12,6 +12,7 @@
     // Разрешает компилить js файлы
     "allowJs": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
   },
